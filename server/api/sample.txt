@@ -1,0 +1,111 @@
+api/v1/
+    - stats/
+        - weekday/id
+                URL PARAMS:
+                    FROM=dd-mm-yyyy
+                    TO=dd-mm-yyyy
+                    TYPE="real" or "estimated"
+                    SORTED="asc" or "desc" (defaults to "asc")
+
+                RETURNS: data: {
+                    days: int, // total de dias contados
+                    total: float, // total a lo largo de todos los dias contados
+                    unnits: "KWh",
+                    weekday: {
+                        0: {
+                            totalConsumption: float,
+                            meanConsumption: float,
+                            medianConsumption: float,
+                        }
+                        1: {
+                            totalConsumption: float,
+                            meanConsumption: float,
+                            medianConsumption: float,
+                        }
+                        2: ...
+                        ...
+                        6: ...
+                    }
+                }
+
+        - day/id
+                URL PARAMS: 
+                    FROM=dd-mm-yyyy
+                    TO=dd-mm-yyyy
+                    TYPE="real" or "estimated"
+                    SORTED="asc" or "desc" (defaults to "asc")
+
+                RETURNS: data: {
+                    days: int, // total de dias contados,
+                    units: "KWh",
+                    total: float, // total a lo largo del plazo
+                    days: {
+                        dd-mm-yyyy: {
+                            consumption: float,
+                        },
+                        dd-mm-yyyy: {
+                            consumption: float,
+                        },
+                        ...
+                    }
+                }
+
+        - month/id
+                URL PARAMS:
+                    FROM=dd-mm-yyyy
+                    TO=dd-mm-yyyy
+                    TYPE="real" or "estimated"
+                    SORTED="asc" or "desc" (defaults to "asc")
+                
+                RETURNS: data {
+                    days: int, // total de dias contados,
+                    units: "KWh",
+                    total: float, // total a lo largo del plazo
+                    months: {
+                        0: {
+                            totalConsumption: float,
+                            meanConsumption: float,
+                            medianConsumption: float,
+                        },
+                        1: ...
+                        ...
+                        11: ...
+                    }
+                }
+
+        - hour/
+                URL PARAMS:
+                    FROM=dd-mm-yyyy
+                    TO=dd-mm-yyyy
+                    TYPE="real" or "estimated"
+                    SORTED="asc" or "desc" (defaults to "asc")
+
+                RETURNS: data {
+                    days: int, // total de dias contados,
+                    units: "KWh",
+                    total: float, // total a lo largo del plazo
+                    hours: {
+                        0: {
+                            totalConsumption: float,
+                            meanConsumption: float,
+                            medianConsumption: float,
+                        },
+                        1: {
+                            ...
+                        },
+                        ...
+                        23: ...
+                    }
+                }
+
+    - points/
+
+        RETURNS: data: {
+            [
+                0, // ids de puntos de suministros
+                1,
+                2,
+                3,
+                ...
+            ]
+        }

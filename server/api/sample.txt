@@ -73,17 +73,17 @@ api/v1/
                     }
                 }
 
-        - hour/
+        - hour/id
                 URL PARAMS:
                     FROM=dd-mm-yyyy
                     TO=dd-mm-yyyy
                     TYPE="real" or "estimated"
                     SORTED="asc" or "desc" (defaults to "asc")
 
-                RETURNS: data {
+                RETURNS: data: {
                     days: int, // total de dias contados,
                     units: "KWh",
-                    total: float, // total a lo largo del plazo
+                    total: float, // total de consumo a lo largo del plazo
                     hours: {
                         0: {
                             totalConsumption: float,

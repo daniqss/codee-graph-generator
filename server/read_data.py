@@ -5,16 +5,15 @@ import pandas as pd
 
 
 def read_data(csv_path):
-
-try: 
-    file = pd.read_csv(csv_path)
-    return df 
-except FileNotFoundError: 
-    print(f"El archivo en la ruta '{csv_path}' no se encontró. ")
-    return None 
-except Exception as ex:
-    print(f"Ocurrio un error al leer el archivo CSV: {ex}")
-    return None        
+    try: 
+        file = pd.read_csv(csv_path)
+        return df 
+    except FileNotFoundError: 
+        print(f"El archivo en la ruta '{csv_path}' no se encontró. ")
+        return None 
+    except Exception as ex:
+        print(f"Ocurrio un error al leer el archivo CSV: {ex}")
+        return None        
 
 
 # 

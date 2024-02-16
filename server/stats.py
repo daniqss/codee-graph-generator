@@ -8,8 +8,8 @@ def group_by_date(df: pd.DataFrame) :
 
 def group_by_hour(df: pd.DataFrame) :
     try: 
-        df['timestamp'] = pd.to_datetime(df['timestamp'])
-        grouped_df = pd.groupby(df['timestamp'].dt.hour).sum()
+        df['Hora'] = pd.to_datetime(df['Hora'])
+        grouped_df = pd.groupby(df['Hora'].dt.hour).sum()
 
         return grouped_df
     except KeyError as ke:

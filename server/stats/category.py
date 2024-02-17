@@ -28,16 +28,18 @@ def category_Lrate_graph(df: pd.DataFrame):
     fig, ax = plt.subplots()
     L1_cache_rate, L2_cache_rate, L3_cache_rate = category_Lrate(df)
 
-    ax.bar(0, L1_cache_rate, color='r', width=0.2, alpha=0.7, label='L1')
-    ax.bar(0.5, L2_cache_rate, color='g', width=0.2, alpha=0.7, label='L2')
-    ax.bar(1.0, L3_cache_rate, color='b', width=0.2, alpha=0.7, label='L3')
+    bar_width = 0.2
+
+    ax.bar(0, L1_cache_rate, color='r', width=bar_width, alpha=0.7, label='L1')
+    ax.bar(0.5, L2_cache_rate, color='g', width=bar_width, alpha=0.7, label='L2')
+    ax.bar(1.0, L3_cache_rate, color='b', width=bar_width, alpha=0.7, label='L3')
 
     ax.set_title(f"Bar plot by target", pad=25)
     ax.set_xticks([0, 0.5, 1.0])
     ax.set_xticklabels(['L1', 'L2', 'L3'])
 
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])
-    plt.title('Lrate graph')
+    plt.title('Priority rate graph')
     plt.legend()
     return fig
 
@@ -45,19 +47,20 @@ def category_rate_graph(df: pd.DataFrame):
     fig, ax = plt.subplots()
     Scalar_rate, Vector_rate, Memory_rate, Control_rate, Multi_rate, Offload_rate, Quality_rate = category_rate(df)
    
-    ax.bar(0, Scalar_rate, color='r', width=0.2, alpha=0.7, label='Scalar')
-    ax.bar(1/6, Vector_rate, color='g', width=0.2, alpha=0.7, label='Vextor')
-    ax.bar(2/6, Memory_rate, color='b', width=0.2, alpha=0.7, label='Memory')
-    ax.bar(3/6, Control_rate, color='purple', width=0.2, alpha=0.7, label='Control')
-    ax.bar(4/6, Vector_rate, color='yellow', width=0.2, alpha=0.7, label='Multi')
-    ax.bar(5/6, Memory_rate, color='pink', width=0.2, alpha=0.7, label='Offload')
-    ax.bar(6/6, Control_rate, color='brown', width=0.2, alpha=0.7, label='Quality')
+    bar_width = 0.15
+    ax.bar(0, Scalar_rate, color='r', width=bar_width, alpha=0.7, label='Scalar')
+    ax.bar(1/6, Vector_rate, color='g', width=bar_width, alpha=0.7, label='Vextor')
+    ax.bar(2/6, Memory_rate, color='b', width=bar_width, alpha=0.7, label='Memory')
+    ax.bar(3/6, Control_rate, color='purple', width=bar_width, alpha=0.7, label='Control')
+    ax.bar(4/6, Multi_rate, color='yellow', width=bar_width, alpha=0.7, label='Multi')
+    ax.bar(5/6, Offload_rate, color='pink', width=bar_width, alpha=0.7, label='Offload')
+    ax.bar(6/6, Quality_rate, color='brown', width=bar_width, alpha=0.7, label='Quality')
     
     ax.set_xticks([0, 1/6, 2/6, 3/6, 4/6, 5/6, 6/6])
     ax.set_xticklabels(['Scalar', 'Vextor', 'Memory', 'Control', 'Multi', 'Offload', 'Quality'])
 
     
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])
-    plt.title('Rate graph')
+    plt.title('Checks rate graph')
     plt.legend()
     return fig

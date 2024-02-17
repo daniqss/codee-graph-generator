@@ -33,7 +33,7 @@ def category_Lrate_graph(df: pd.DataFrame):
     ax.set_xticklabels(['L1', 'L2', 'L3'])
 
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])
-    plt.title('Gráfico de Barras')
+    plt.title('Lrate graph')
     plt.legend()
     return fig
 
@@ -52,6 +52,6 @@ def category_rate_graph(df: pd.DataFrame):
 
     
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])
-    plt.title('Gráfico de Barras')
+    plt.title('Rate graph')
     plt.legend()
     return fig

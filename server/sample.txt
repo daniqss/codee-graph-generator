@@ -8,6 +8,7 @@ api/v1/
                     SORTED="asc" or "desc" (defaults to "asc")
 
                 RETURNS: data: {
+                    cups: string, // cups del punto de suministro
                     days: int, // total de dias contados
                     total: float, // total a lo largo de todos los dias contados
                     unnits: "KWh",
@@ -36,6 +37,7 @@ api/v1/
                     SORTED="asc" or "desc" (defaults to "asc")
 
                 RETURNS: data: {
+                    cups: string, // cups del punto de suministro
                     days: int, // total de dias contados,
                     units: "KWh",
                     total: float, // total a lo largo del plazo
@@ -58,6 +60,7 @@ api/v1/
                     SORTED="asc" or "desc" (defaults to "asc")
                 
                 RETURNS: data {
+                    cups: string, // cups del punto de suministro
                     days: int, // total de dias contados,
                     units: "KWh",
                     total: float, // total a lo largo del plazo
@@ -81,6 +84,7 @@ api/v1/
                     SORTED="asc" or "desc" (defaults to "asc")
 
                 RETURNS: data: {
+                    cups: string, // cups del punto de suministro
                     days: int, // total de dias contados,
                     units: "KWh",
                     total: float, // total de consumo a lo largo del plazo

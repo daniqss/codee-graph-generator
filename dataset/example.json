@@ -1,0 +1,102 @@
+{
+ "Evaluation": [
+ [
+  {
+   "Target": "../PL/pfinal/utils.c",
+   "Lines of code": "233",
+   "Optimizable lines": "58",
+   "Analysis time": "35 ms",
+   "# checks": "4",
+   "Effort": "28 h",
+   "Cost": "916€",
+   "Profiling": "  n/a"
+  },
+  {
+   "Target": "../PL/pfinal/symbols.c",
+   "Lines of code": "94",
+   "Optimizable lines": "6",
+   "Analysis time": "30 ms",
+   "# checks": "1",
+   "Effort": "8 h",
+   "Cost": "261€",
+   "Profiling": "  n/a"
+  },
+  {
+   "Target": "Total",
+   "Lines of code": "327",
+   "Optimizable lines": "64",
+   "Analysis time": "65 ms",
+   "# checks": "5",
+   "Effort": "36 h",
+   "Cost": "1178€",
+   "Profiling": "  n/a"
+  }
+ ],
+ [
+  {
+   "Target": "../PL/pfinal/utils.c",
+   "Scalar": "0",
+   "Control": "0",
+   "Memory": "0",
+   "Vector": "3",
+   "Multi": "n/a",
+   "Offload": "n/a",
+   "Quality": "1",
+   "L1": "3",
+   "L2": "0",
+   "L3": "1"
+  },
+  {
+   "Target": "../PL/pfinal/symbols.c",
+   "Scalar": "0",
+   "Control": "0",
+   "Memory": "0",
+   "Vector": "1",
+   "Multi": "n/a",
+   "Offload": "n/a",
+   "Quality": "0",
+   "L1": "1",
+   "L2": "0",
+   "L3": "0"
+  },
+  {
+   "Target": "Total",
+   "Scalar": "0",
+   "Control": "0",
+   "Memory": "0",
+   "Vector": "4",
+   "Multi": "n/a",
+   "Offload": "n/a",
+   "Quality": "1",
+   "L1": "4",
+   "L2": "0",
+   "L3": "1"
+  }
+ ]
+],
+ "Ranking of Checkers": [
+ [
+  {
+   "Checker": "RMK015",
+   "Level": "L1",
+   "Priority": "P27",
+   "#": "2",
+   "Title": "Tune compiler optimization flags to increase the speed of the code"
+  },
+  {
+   "Checker": "PWR053",
+   "Level": "L1",
+   "Priority": "P12",
+   "#": "2",
+   "Title": "Consider applying vectorization to forall loop"
+  },
+  {
+   "Checker": "PWR001",
+   "Level": "L3",
+   "Priority": "P3",
+   "#": "1",
+   "Title": "Declare global variables as function parameters"
+  }
+ ]
+]
+}

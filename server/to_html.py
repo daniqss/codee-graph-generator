@@ -1,5 +1,6 @@
-from datetime import dt
+from datetime import datetime as dt
 import mpld3
+import os
 
 def figs_to_html (figs):
     htmls = []
@@ -43,7 +44,8 @@ def to_html (figs):
     </body>
     </html>
     """
-    filename = "/results/" + dt.now().strftime("%Y-%m-%d_%H-%M-%S") + ".html"
+    os.makedirs('results', exist_ok=True)
+    filename = "results/" + dt.now().strftime("%Y-%m-%d_%H-%M-%S") + ".html"
     with open(filename, 'w') as f:
         f.write(combined_html)
 

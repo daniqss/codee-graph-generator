@@ -3,9 +3,9 @@ import subprocess
 import os
 import read_data as rd
 import stats.category as cat
-import stats.checkers as chk
+# import stats.checkers as chk
 import stats.screening as scr
-import to_html as to_html
+from to_html import to_html
 
 def usage():
     print("Usage: python run.py <file1> <file2> ... <fileN>")
@@ -32,7 +32,6 @@ def obtain_arguments():
 def run_codee(files, path):
     # Make string from list of files
     files_str = ' '.join(files)
-    print(files_str)
 
     # Run codee
     result = subprocess.run(f'{path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
@@ -41,8 +40,6 @@ def run_codee(files, path):
     output = result.stdout.decode('utf-8')
     return output
 
-    
-
 
 if __name__ == '__main__':
     files, codee_path = obtain_arguments()
@@ -50,7 +47,7 @@ if __name__ == '__main__':
     output = run_codee(files, codee_path)
     dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
-    figs = []
+    figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
     # Add stats to dataframes
 
 

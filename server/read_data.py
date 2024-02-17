@@ -1,13 +1,15 @@
 import pandas as pd
-
-# def function read_data(csv_path)
-# devuelve un pandas DataFrame
-
+import json
 
 def read_data(json_path):
     try:
-        file = pd.read_json(json_path)
-        return file
+        file = json.load(open("dataset/example.json"))
+        screening = pd.DataFrame(file['Evaluation'][0])
+        category = pd.DataFrame(file['Evaluation'][1])
+        checkers = pd.DataFrame(file['Ranking of Checkers'][0])
+
+        return screening, category, checkers
+
     except FileNotFoundError: 
         print(f"El archivo en la ruta '{json_path}' no se encontró. ")
         return None 

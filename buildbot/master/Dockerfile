@@ -29,15 +29,18 @@ RUN buildbot create-master master
 # Crear el directorio 'results' y copiar los archivos desde el directorio local al contenedor
 RUN mkdir -p /buildbot/results
 COPY master.cfg /buildbot/master/master.cfg
-COPY server.js /buildbot/server.js
+# COPY server.js /buildbot/server.js
+COPY http_server.sh /buildbot/http_server.sh
+RUN chmod +x /buildbot/http_server.sh
 
 # Crear el directorio 'master' y copiar el Dockerfile al contenedor
 RUN mkdir -p /buildbot/master
+RUN python3 -m http.server 9000 &
 
 # Exponer los puertos
 EXPOSE 8010
-EXPOSE 80
+EXPOSE 9000
 
 # Comando de entrada
 # RUN node /buildbot/server.js
-ENTRYPOINT buildbot upgrade-master master && buildbot start --nodaemon master
+ENTRYPOINT buildbot upgrade-master master && ./http_server.sh && buildbot start --nodaemon master

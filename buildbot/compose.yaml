@@ -30,7 +30,7 @@ services:
       - GIT_URL=${GIT_URL}
     ports:
       - 8010:8010
-      - 80:9000
+      - 9000:9000
     networks:
       - buildbot-network
     depends_on:

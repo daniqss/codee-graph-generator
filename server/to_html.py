@@ -8,7 +8,7 @@ def figs_to_html (figs):
         htmls.append(mpld3.fig_to_html(fig))
     return htmls
 
-def to_html (figs):
+def to_html (filename, figs):
     htmls = figs_to_html(figs, filename)
     
     combined_html = f"""

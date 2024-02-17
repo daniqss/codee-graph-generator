@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
 
     # Make HTML from figs
-    message = to_html(figs, operation)
+    message = to_html(operation, figs)
 
     # Send to email
     send_to_email(operation, message)

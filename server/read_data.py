@@ -18,7 +18,11 @@ def convert_types_screening(df):
 def convert_types_category(df):
     for k, v in TYPE_MAPPINGS_CATEGORY.items():
         df[k] = df[k].astype(v, errors='ignore')
-    
+
+    #search for string n/a and replace with 0 in columns Multi and Offload
+    df['Multi'] = df['Multi'].replace('n/a', 0)
+    df['Offload'] = df['Offload'].replace('n/a', 0)
+
     return df
 
 def convert_types_checkers(df):

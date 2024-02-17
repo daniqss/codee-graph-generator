@@ -14,12 +14,15 @@ def category_Lrate(df: pd.DataFrame):
 def category_rate(df: pd.DataFrame):
     cp_df = df.copy()
     cp_df = cp_df.iloc[:-1]
-    L_sum = cp_df['Scalar'] + cp_df['Vector'] + cp_df['Memory'] + cp_df['Control']
+    L_sum = cp_df['Scalar'] + cp_df['Vector'] + cp_df['Memory'] + cp_df['Control'] + cp_df['Multi'] + cp_df['Offload'] + cp_df['Quality']
     Scalar_rate = cp_df['Scalar'] / L_sum
     Vector_rate = cp_df['Vector'] / L_sum
     Memory_rate = cp_df['Memory'] / L_sum
     Control_rate = cp_df['Control'] / L_sum
-    return Scalar_rate, Vector_rate, Memory_rate, Control_rate
+    Multi_rate = cp_df['Multi'] / L_sum
+    Offload_rate = cp_df['Offload'] / L_sum
+    Quality_rate = cp_df['Quality'] / L_sum
+    return Scalar_rate, Vector_rate, Memory_rate, Control_rate, Multi_rate, Offload_rate, Quality_rate
 
 def category_Lrate_graph(df: pd.DataFrame):
     fig, ax = plt.subplots()
@@ -29,6 +32,7 @@ def category_Lrate_graph(df: pd.DataFrame):
     ax.bar(0.5, L2_cache_rate, color='g', width=0.2, alpha=0.7, label='L2')
     ax.bar(1.0, L3_cache_rate, color='b', width=0.2, alpha=0.7, label='L3')
 
+    ax.set_title(f"Bar plot by target", pad=25)
     ax.set_xticks([0, 0.5, 1.0])
     ax.set_xticklabels(['L1', 'L2', 'L3'])
 
@@ -39,16 +43,18 @@ def category_Lrate_graph(df: pd.DataFrame):
 
 def category_rate_graph(df: pd.DataFrame):
     fig, ax = plt.subplots()
-    Scalar_rate, Vector_rate, Memory_rate, Control_rate = category_rate(df)
+    Scalar_rate, Vector_rate, Memory_rate, Control_rate, Multi_rate, Offload_rate, Quality_rate = category_rate(df)
    
     ax.bar(0, Scalar_rate, color='r', width=0.2, alpha=0.7, label='Scalar')
-    ax.bar(0.33, Vector_rate, color='g', width=0.2, alpha=0.7, label='Vextor')
-    ax.bar(0.66, Memory_rate, color='b', width=0.2, alpha=0.7, label='Memory')
-    ax.bar(1, Control_rate, color='b', width=0.2, alpha=0.7, label='Control')
+    ax.bar(1/6, Vector_rate, color='g', width=0.2, alpha=0.7, label='Vextor')
+    ax.bar(2/6, Memory_rate, color='b', width=0.2, alpha=0.7, label='Memory')
+    ax.bar(3/6, Control_rate, color='purple', width=0.2, alpha=0.7, label='Control')
+    ax.bar(4/6, Vector_rate, color='yellow', width=0.2, alpha=0.7, label='Multi')
+    ax.bar(5/6, Memory_rate, color='pink', width=0.2, alpha=0.7, label='Offload')
+    ax.bar(6/6, Control_rate, color='brown', width=0.2, alpha=0.7, label='Quality')
     
-
-    ax.set_xticks([0, 0.33, 0.66, 1.0])
-    ax.set_xticklabels(['Scalar', 'Vextor', 'Memory', 'Control'])
+    ax.set_xticks([0, 1/6, 2/6, 3/6, 4/6, 5/6, 6/6])
+    ax.set_xticklabels(['Scalar', 'Vextor', 'Memory', 'Control', 'Multi', 'Offload', 'Quality'])
 
     
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])

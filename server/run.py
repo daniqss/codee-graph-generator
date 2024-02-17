@@ -2,10 +2,12 @@ import sys
 import subprocess
 import os
 import read_data as rd
+from datetime import datetime as dt
 import stats.category as cat
 # import stats.checkers as chk
 import stats.screening as scr
 from to_html import to_html
+from send_to_email import send_to_email
 
 def usage():
     print("Usage: python run.py <file1> <file2> ... <fileN>")
@@ -50,7 +52,11 @@ if __name__ == '__main__':
     figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
     # Add stats to dataframes
 
+    operation = "results/" + dt.now().strftime("%Y-%m-%d_%H-%M-%S") + ".html"
 
 
     # Make HTML from figs
-    to_html(figs)
+    message = to_html(figs, operation)
+
+    # Send to email
+    send_to_email(operation, message)

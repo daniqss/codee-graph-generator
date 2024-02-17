@@ -9,7 +9,7 @@ def figs_to_html (figs):
     return htmls
 
 def to_html (figs):
-    htmls = figs_to_html(figs)
+    htmls = figs_to_html(figs, filename)
     
     combined_html = f"""
     <!DOCTYPE html>
@@ -45,7 +45,8 @@ def to_html (figs):
     </html>
     """
     os.makedirs('results', exist_ok=True)
-    filename = "results/" + dt.now().strftime("%Y-%m-%d_%H-%M-%S") + ".html"
     with open(filename, 'w') as f:
         f.write(combined_html)
+
+    return combined_html
 

@@ -43,6 +43,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - CODEE_PATH=${CODEE_PATH}
+      - CODEE_ACCEPT_EULA=yes
     volumes:
       - ${CODEE_PATH}:/mnt
     networks:

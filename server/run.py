@@ -1,14 +1,12 @@
 import sys
 import subprocess
 import os
-import json
+import read_data as rd
 
 def usage():
     print("Usage: python run.py <file1> <file2> ... <fileN>")
     sys.exit(1)
-
-def parse_result(result):
-    json 
+    
 
 def obtain_arguments():
     # Get codee path from environment variable
@@ -35,8 +33,9 @@ def run_codee(files, path):
 
     # Decode the output to a string
     output = result.stdout.decode('utf-8')
+    rd.read_data(output)
 
-    # Print the output or use it as needed
+    # print(output)
     
 
 

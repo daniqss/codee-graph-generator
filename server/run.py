@@ -29,7 +29,7 @@ def run_codee(files, path):
     # Make string from list of files
     files_str = ' '.join(files)
     # Run codee
-    result = subprocess.run(f'{path} {files_str}', shell=True, stdout=subprocess.PIPE)
+    result = subprocess.run(f'{path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
 
     # Decode the output to a string
     output = result.stdout.decode('utf-8')

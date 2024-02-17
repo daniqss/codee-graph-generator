@@ -35,7 +35,7 @@ def category_Lrate_graph(df: pd.DataFrame):
 
 def category_rate_graph(df: pd.DataFrame):
     Scalar_rate, Vector_rate, Memory_rate, Control_rate = category_rate(df)
-    
+
     Scalar_rate.plot(kind='bar', color='r', alpha=0.7, label='Scalar')
     Vector_rate.plot(kind='bar', color='g', alpha=0.7, label='Vector')
     Memory_rate.plot(kind='bar', color='b', alpha=0.7, label='Memory')
@@ -45,3 +45,4 @@ def category_rate_graph(df: pd.DataFrame):
     plt.title('Gráfico de Barras')
     plt.legend()
     plt.show()
+    

@@ -18,7 +18,9 @@ RUN apt update && \
 
 # Actualizar pip e instalar Buildbot y psycopg2-binary
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install 'buildbot[bundle]==3.11.0' psycopg2-binary==2.9.9
+    python3 -m pip install 'buildbot[bundle]==3.11.0' psycopg2-binary==2.9.9 
+
+RUN python3 -m pip install pandas matplotlib
 
 # Configurar el directorio de trabajo
 WORKDIR /buildbot

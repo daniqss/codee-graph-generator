@@ -37,14 +37,10 @@ def obtain_arguments():
 
 def run_codee(dir, codee_path):
     # Make string from list of files
-    files_str = []
     # Last time fix, sorry!
-    for root, dirs, files in os.walk(dir):
-        for file in files:
-            if file.endswith(".c"):
-                files_str.append(os.path.join(root, file))
+    absolute_path = os.path.abspath(dir)
     # Run codee
-    result = subprocess.run(f'{codee_path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
+    result = subprocess.run(f'{codee_path} {absolute_path} --json', shell=True, stdout=subprocess.PIPE)
 
     # Decode the output to a string
     output = result.stdout.decode('utf-8')

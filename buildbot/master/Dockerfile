@@ -22,19 +22,20 @@ RUN python3 -m pip install --upgrade pip && \
 
 # Configurar el directorio de trabajo
 WORKDIR /buildbot
+RUN buildbot create-master master
 
 # Crear el directorio 'results' y copiar los archivos desde el directorio local al contenedor
 RUN mkdir -p /buildbot/results
-COPY master.cfg /buildbot/master.cfg
+COPY master.cfg /buildbot/master/master.cfg
 COPY server.js /buildbot/server.js
 
 # Crear el directorio 'master' y copiar el Dockerfile al contenedor
 RUN mkdir -p /buildbot/master
-COPY Dockerfile /buildbot/master/Dockerfile
 
 # Exponer los puertos
 EXPOSE 8010
 EXPOSE 80
 
 # Comando de entrada
-ENTRYPOINT buildbot upgrade-master master && buildbot start --nodaemon master && node /buildbot/server.js
+# RUN node /buildbot/server.js
+ENTRYPOINT buildbot upgrade-master master && buildbot start --nodaemon master

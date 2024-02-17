@@ -5,12 +5,12 @@
 import sys
 import subprocess
 import os
-import script.read_data as rd
+import read_data as rd
 from datetime import datetime as dt
 import stats.category as cat
 import stats.checkers as chk
 import stats.screening as scr
-from script.to_html import to_html
+from to_html import to_html
 # from send_to_email import send_to_email
 
 def usage():

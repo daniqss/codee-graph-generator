@@ -26,10 +26,12 @@ The CODEE_PATH env variable has to be the executable path
 Here is a description of its usage:
 
 ```bash
-CODEE_PATH=/path/to/codee python run.py <file1> <file2> ... <fileN>
-<file1> <file2> ... <fileN>: List of files to be analyzed with Codee.
-The program performs the following actions:
+CODEE_PATH=/path/to/codee python run.py <file1> <file2> ... <fileN> / <dir>
 ```
 
+# Contributing
+If you want to contribute to the project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-# 
+# License
+This project is licensed under the terms of the [MIT License](LICENSE.md).
+```

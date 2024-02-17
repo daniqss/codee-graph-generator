@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
 import json
-from constants import *
+from script.constants import *
 
 def convert_types_screening(df):
     df['Cost'] = df['Cost'].apply(lambda x: x[:-1])

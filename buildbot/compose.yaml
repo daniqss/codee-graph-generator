@@ -22,7 +22,6 @@ services:
       context: master
       dockerfile: Dockerfile
     environment:
-      - SOURCE_PATH=${SOURCE_PATH}
       - GIT_URL=${GIT_URL}
     ports:
       - 8010:8010
@@ -40,7 +39,7 @@ services:
     environment:
       - CODEE_PATH=${CODEE_PATH}
     volumes:
-      - ${CODEE_PATH}:/mnt/codee
+      - ${CODEE_PATH}:/mnt
     networks:
       - buildbot-network
 

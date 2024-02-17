@@ -37,14 +37,10 @@ def obtain_arguments():
 
 def run_codee(dir, codee_path):
     # Make string from list of files
-    files_str = []
     # Last time fix, sorry!
-    for root, dirs, files in os.walk(dir):
-        for file in files:
-            if file.endswith(".c"):
-                files_str.append(os.path.join(root, file))
+    absolute_path = os.path.abspath(dir)
     # Run codee
-    result = subprocess.run(f'{codee_path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
+    result = subprocess.run(f'{codee_path} {absolute_path} --json', shell=True, stdout=subprocess.PIPE)
 
     # Decode the output to a string
     output = result.stdout.decode('utf-8')
@@ -59,7 +55,7 @@ if __name__ == '__main__':
     dir, codee_path = obtain_arguments()
 
     output = run_codee(dir, codee_path)
-    dt_screening, dt_category, dt_checkers = rd.read_data_from_file(output)
+    dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
     cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
     scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines"),

@@ -16,6 +16,8 @@ RUN apt install -y build-essential \
 RUN python -m pip install --upgrade pip
 RUN python -m pip install buildbot-worker==3.11.0
 
+RUN mkdir -p /mnt
+
 WORKDIR /buildbot
 RUN buildbot-worker create-worker worker buildbot-master-node worker worker
 

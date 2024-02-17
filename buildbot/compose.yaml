@@ -21,7 +21,9 @@ services:
     build:
       context: master
       dockerfile: Dockerfile
-    image: buildbot-master-image
+    environment:
+      - SOURCE_PATH=${SOURCE_PATH}
+      - GIT_URL=${GIT_URL}
     ports:
       - 8010:8010
     networks:
@@ -34,7 +36,10 @@ services:
     build:
       context: worker
       dockerfile: Dockerfile
-    image: buildbot-worker-image
+    environment:
+      - CODEE_PATH=${CODEE_PATH}
+    volumes:
+      - ${CODEE_PATH}:/mnt/codee
     networks:
       - buildbot-network
 

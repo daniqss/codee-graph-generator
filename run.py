@@ -31,12 +31,12 @@ def obtain_arguments():
     return files, codee_path
 
 
-def run_codee(files, path):
+def run_codee(files, codee_path):
     # Make string from list of files
     files_str = ' '.join(files)
 
     # Run codee
-    result = subprocess.run(f'{path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
+    result = subprocess.run(f'{codee_path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
 
     # Decode the output to a string
     output = result.stdout.decode('utf-8')

@@ -35,10 +35,11 @@ def category_Lrate_graph(df: pd.DataFrame):
     ax.bar(1.0, L3_cache_rate, color='b', width=bar_width, alpha=0.7, label='L3')
 
     ax.set_title(f"Bar plot by target", pad=25)
-    ax.set_xticks([0, 0.5, 1.0])
-    ax.set_xticklabels(['L1', 'L2', 'L3'])
 
-    plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])
+    ax.set_xticklabels(['L1', 'L2', 'L3'])
+    ax.set_xticks([0, 0.5, 1.0])
+    ax.set_yticklabels(['0%', '20%', '40%', '60%', '80%', '100%'])
+    ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1])
     plt.title('Priority rate graph')
     plt.legend()
     return fig
@@ -56,8 +57,12 @@ def category_rate_graph(df: pd.DataFrame):
     ax.bar(5/6, Offload_rate, color='pink', width=bar_width, alpha=0.7, label='Offload')
     ax.bar(6/6, Quality_rate, color='brown', width=bar_width, alpha=0.7, label='Quality')
     
-    ax.set_xticks([0, 1/6, 2/6, 3/6, 4/6, 5/6, 6/6])
+
     ax.set_xticklabels(['Scalar', 'Vextor', 'Memory', 'Control', 'Multi', 'Offload', 'Quality'])
+    ax.set_xticks([0, 1/6, 2/6, 3/6, 4/6, 5/6, 6/6])
+    
+    ax.set_yticklabels(['0%', '20%', '40%', '60%', '80%', '100%'])
+    ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1])
 
     
     plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1], ['0%', '20%', '40%', '60%', '80%', '100%'])

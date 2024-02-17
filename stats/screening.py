@@ -83,3 +83,11 @@ def bar_plot(df, col, title='Bar plot', include_total=True, max_range=0):
     # increase plot size to allow room for long labels
     # fig.set_size_inches(10, 10)
     return fig
+
+def category_lines_optimizable_per_analysis_time(df: pd.DataFrame):
+
+    #Returns de optimizable lines detected per analysis time
+
+    ret_df = df.copy()[:-1]
+    ret_df['opt_lines_analysis_time'] = ret_df['Optimizable lines'] / ret_df['Analysis time']
+    return ret_df

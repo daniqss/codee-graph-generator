@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Gael Garcia Arias, Ivan Afonso Cerdeira, Daniel Queijo Seoane, Luca D'angel Sabin
+#
+# SPDX-License-Identifier: MIT
+
 import resend
 from os import environ
 

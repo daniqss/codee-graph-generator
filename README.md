@@ -19,7 +19,7 @@ To run the codee_graph_generator, you need to have Docker installed on your mach
     cd buildbot
     chmod +x build_containers.sh
     bash ./build_containers.sh
-    GIT_URL=https://github.com/githubuser/repo.git
+    GIT_URL=https://github.com/githubuser/repo.git CODE_PATH=/path/to/codee docker compose up
 ```
 
 ### In Windows

@@ -4,7 +4,7 @@ import os
 import read_data as rd
 from datetime import datetime as dt
 import stats.category as cat
-# import stats.checkers as chk
+#import stats.checkers as chk
 import stats.screening as scr
 from to_html import to_html
 # from send_to_email import send_to_email

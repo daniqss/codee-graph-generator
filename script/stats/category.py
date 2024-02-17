@@ -4,7 +4,6 @@
 
 from matplotlib import pyplot as plt
 import pandas as pd
-import json
 
 def category_Lrate(df: pd.DataFrame):
     cp_df = df.copy()

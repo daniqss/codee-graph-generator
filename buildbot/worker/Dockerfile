@@ -15,6 +15,7 @@ RUN apt install -y build-essential \
 
 RUN python -m pip install --upgrade pip
 RUN python -m pip install buildbot-worker==3.11.0
+RUN python3 -m pip install pandas matplotlib mpld3
 
 WORKDIR /buildbot
 RUN buildbot-worker create-worker worker buildbot-master-node worker worker

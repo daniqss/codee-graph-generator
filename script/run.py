@@ -31,17 +31,18 @@ def obtain_arguments():
         sys.exit(1)
 
     # Obtén la lista de archivos a ejecutar
-    files = sys.argv[1:]
-    return files, codee_path
+    dir = sys.argv[1]
+    return dir, codee_path
 
 
 def run_codee(dir, codee_path):
     # Make string from list of files
     files_str = []
+    # Last time fix, sorry!
     for root, dirs, files in os.walk(dir):
-        files_str += files
-        print(files)
-        break
+        for file in files:
+            if file.endswith(".c"):
+                files_str.append(os.path.join(root, file))
     # Run codee
     result = subprocess.run(f'{codee_path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
 
@@ -55,10 +56,10 @@ if __name__ == '__main__':
     scr_figs = []
     chk_figs = []
 
-    files, codee_path = obtain_arguments()
+    dir, codee_path = obtain_arguments()
 
-    output = run_codee(files, codee_path)
-    dt_screening, dt_category, dt_checkers = rd.read_data(output)
+    output = run_codee(dir, codee_path)
+    dt_screening, dt_category, dt_checkers = rd.read_data_from_file(output)
 
     cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
     scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines"),

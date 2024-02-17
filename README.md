@@ -29,19 +29,6 @@ To run the codee_graph_generator, you need to have Docker installed on your mach
     buildbot\build_containers.bat
 ```
 
-<<<<<<< HEAD
-=======
-# Script usage
-The run.py program is used to execute Codee on a list of given files.
-The CODEE_PATH env variable has to be the executable path
-Here is a description of its usage:
-
-```bash
-CODEE_PATH=/path/to/codee
-python run.py <file1> <file2> ... <fileN> / <dir>
-```
-
->>>>>>> 4f7ae91 (Deleted old directory)
 # Contributing
 If you want to contribute to the project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 

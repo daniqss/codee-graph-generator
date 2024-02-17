@@ -1,0 +1,1 @@
+1: Link simbolico hay que listar a qué fichero referencia.

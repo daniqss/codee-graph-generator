@@ -1,0 +1,22 @@
+// bool validarArgumentos(char* argumento, const char* argumentos_validos[][LONGITUD_MAX_ARGUMENTOS], int indice) {
+//
+//   if (argumento == NULL) return true; // Verifica si el comando es pasado sin argumentos
+//
+//   if (strlen(argumento) < 2) return false; //si el argumento es mayor que 0 y menor que 2 en tamaño, no es válido.
+//
+//   for (int i=0; argumentos_validos[indice][i]!=NULL ; ++i) {  /*Si fue pasado con argumentos recorre la lista de argumentos
+//                                                              del mismo índice del comando para comprobar si es valido el argumento*/
+//     if (argumento[0] == argumentos_validos[indice][i][0]) { //compara si el '-' es igual
+//       if (argumento[1] == argumentos_validos[indice][i][1]) { //luego compara la letra del argumento
+//       } //se usa esa comparacion para el caso del historic -rN
+//     }
+//
+//   }
+//   return false;
+// }
+
+
+// if (*n_palabras > 2) {/* Para esta práctica solo se pasarán 1 o 0 argumentos
+//                      por lo que se descarta el comando si se pasó con dos argumentos*/
+//   c_troceado[0] = NULL;
+// }

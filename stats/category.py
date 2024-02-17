@@ -69,3 +69,5 @@ def category_rate_graph(df: pd.DataFrame):
     plt.title('Checks rate graph')
     plt.legend()
     return fig
+
+

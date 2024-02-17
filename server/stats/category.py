@@ -1,4 +1,5 @@
-def distribution_category(df):
+import pandas as pd
 
-def category(df):
 
+def category(df: pd.DataFrame): 
+    

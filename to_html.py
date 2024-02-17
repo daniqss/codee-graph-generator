@@ -71,7 +71,7 @@ def to_html (filename, cat_figs, scr_figs, chk_figs):
     </html>
     """
     os.makedirs('results', exist_ok=True)
-    with open("results/" + filename + ".html", 'w') as f:
+    with open("results/index.html", 'w') as f:
         f.write(combined_html)
 
     return combined_html

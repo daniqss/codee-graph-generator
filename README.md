@@ -9,7 +9,9 @@ To run the codee_graph_generator, you need to have Docker installed on your mach
 ```bash
     cd buildbot
     chmod +x build_containers.sh
-    bash ./build_containers.sh
+    CODEE_PATH=/path/to/pwreport bash ./build_containers.sh
+
+    docker exec -it buildbot-buildbot-master-node-1 bash
 ```
 
 ### In Windows
@@ -28,3 +30,6 @@ CODEE_PATH=/path/to/codee python run.py <file1> <file2> ... <fileN>
 <file1> <file2> ... <fileN>: List of files to be analyzed with Codee.
 The program performs the following actions:
 ```
+
+
+# 

@@ -29,6 +29,8 @@ To run the codee_graph_generator, you need to have Docker installed on your mach
     buildbot\build_containers.bat
 ```
 
+To visualize the results, open localhost:9000 in your browser.
+
 # Contributing
 If you want to contribute to the project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 

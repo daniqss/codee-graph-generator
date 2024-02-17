@@ -34,4 +34,3 @@ If you want to contribute to the project, please read the [CONTRIBUTING.md](CONT
 
 # License
 This project is licensed under the terms of the [MIT License](LICENSE.md).
-```

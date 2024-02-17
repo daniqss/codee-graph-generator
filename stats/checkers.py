@@ -10,6 +10,6 @@ def bar_plot(df, col, title='Bar plot', include_total=True, max_range=0):
     fig, ax = plt.subplots(figsize=(12, 6))
 
     ax.bar(df['Checker'], df[col], color=plt.cm.Paired.colors)
-    ax.set_title(f"{title} by checker and {col}", pad=25)
+    ax.set_title(f"{title} shorted by {col}", pad=25)
     ax.set_xticklabels(df['Checker'], rotation=75, fontsize=8)
     return fig

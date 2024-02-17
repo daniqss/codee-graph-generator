@@ -4,7 +4,7 @@ import os
 import read_data as rd
 from datetime import datetime as dt
 import stats.category as cat
-#import stats.checkers as chk
+import stats.checkers as chk
 import stats.screening as scr
 from to_html import to_html
 # from send_to_email import send_to_email
@@ -54,7 +54,9 @@ if __name__ == '__main__':
     dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
     cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
-    scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines")]
+    scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines"),
+                scr.effort_cost_ratio_plot(dt_screening), scr.optimizable_lines_ratio_plot(dt_screening)]
+    chk_figs = [chk.bar_plot(dt_checkers, "Priority"), chk.bar_plot(dt_checkers, "#")]
     # Add stats to dataframes
 
     operation_name = dt.now().strftime("%Y-%m-%d_%H-%M-%S")

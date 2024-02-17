@@ -1,6 +1,18 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
 
-# functions to process 
+
+def get_effort_cost_ratio(df):
+    '''
+    Returns the ratio effort/cost for each target
+    '''
+    ret_df = df.copy()[:-1]
+    ret_df['effort_cost_ratio'] = ret_df['Effort'] / ret_df['Cost']
+    return ret_df
+
+
+
 def get_screening_reports(df):
     '''
     Returns the  reports from screening
@@ -9,6 +21,28 @@ def get_screening_reports(df):
     ret_df['optimizable_lines_ratio'] = ret_df['Optimizable lines'] / ret_df['Lines of code']
 
     return ret_df
+
+# functions to plot data from processed data over this part of the code
+def effort_cost_ratio_plot(df, title='Effort/Cost ratio'):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    df = get_effort_cost_ratio(df)
+    df = df.sort_values(by='effort_cost_ratio', ascending=True)
+    ax.bar(df['Target'], df['effort_cost_ratio'], color=plt.cm.Paired.colors)
+    # set limit for x axis from 0 to 1
+    ax.set_ylim(0, 0.2)
+    ax.set_title(f"{title} by target", pad=25)
+    ax.set_xticklabels(df['Target'], rotation=75, fontsize=8)
+    return fig
+
+# functions to plot data from get_screening_reports 
+def optimizable_lines_ratio_plot(df, title='Optimizable lines ratio'):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    df = get_screening_reports(df)
+    df = df.sort_values(by='optimizable_lines_ratio', ascending=True)
+    ax.bar(df['Target'], df['optimizable_lines_ratio'], color=plt.cm.Paired.colors)
+    ax.set_title(f"{title} by target", pad=25)
+    ax.set_xticklabels(df['Target'], rotation=75, fontsize=8)
+    return fig
 
 def pizza_plot(df, col, title='Pizza plot', include_total=True, absolute_units=False):
     fig, ax = plt.subplots(figsize=(10, 10))

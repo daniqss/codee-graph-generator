@@ -1,5 +1,5 @@
 # Description
-codee_graph_generator is a Python program that generates a graph from the output of the Codee tool. The graphs are generated using the Matplotlib library and are saved as HTML files using the Plotly library.
+codee_graph_generator is a Python program that generates a graph from the output of the Codee tool. The graphs are generated using the Matplotlib library and are saved as HTML files using the mpld3 library.
 [Codee](https://www.codee.com/) is a suite of command-line tools aimed at helping software developers to build better quality parallel software in less time.
 
 # Run Docker containers

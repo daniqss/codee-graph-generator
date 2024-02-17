@@ -53,7 +53,8 @@ if __name__ == '__main__':
     output = run_codee(files, codee_path)
     dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
-    cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category) , scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines")]
+    cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
+    scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines")]
     # Add stats to dataframes
 
     operation_name = dt.now().strftime("%Y-%m-%d_%H-%M-%S")

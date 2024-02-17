@@ -44,19 +44,23 @@ def run_codee(files, path):
 
 
 if __name__ == '__main__':
+    cat_figs = []
+    scr_figs = []
+    chk_figs = []
+
     files, codee_path = obtain_arguments()
 
     output = run_codee(files, codee_path)
     dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
-    figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category) , scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines")]
+    cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category) , scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines")]
     # Add stats to dataframes
 
-    operation = "results/" + dt.now().strftime("%Y-%m-%d_%H-%M-%S") + ".html"
+    operation_name = dt.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 
     # Make HTML from figs
-    message = to_html(operation, figs)
+    message = to_html(operation_name, cat_figs, scr_figs, chk_figs)
 
     # Send to email
     # send_to_email(operation, message)

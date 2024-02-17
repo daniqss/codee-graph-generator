@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 
 # Only one type of char, but we should be able to use it for priority and #

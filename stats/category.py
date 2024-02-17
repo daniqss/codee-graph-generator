@@ -50,7 +50,7 @@ def category_rate_graph(df: pd.DataFrame):
    
     bar_width = 0.15
     ax.bar(0, Scalar_rate, color='r', width=bar_width, alpha=0.7, label='Scalar')
-    ax.bar(1/6, Vector_rate, color='g', width=bar_width, alpha=0.7, label='Vextor')
+    ax.bar(1/6, Vector_rate, color='g', width=bar_width, alpha=0.7, label='Vector')
     ax.bar(2/6, Memory_rate, color='b', width=bar_width, alpha=0.7, label='Memory')
     ax.bar(3/6, Control_rate, color='purple', width=bar_width, alpha=0.7, label='Control')
     ax.bar(4/6, Multi_rate, color='yellow', width=bar_width, alpha=0.7, label='Multi')
@@ -60,7 +60,7 @@ def category_rate_graph(df: pd.DataFrame):
 
     ax.set_xticklabels(['Scalar', 'Vextor', 'Memory', 'Control', 'Multi', 'Offload', 'Quality'])
     ax.set_xticks([0, 1/6, 2/6, 3/6, 4/6, 5/6, 6/6])
-    
+
     ax.set_yticklabels(['0%', '20%', '40%', '60%', '80%', '100%'])
     ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1])
 

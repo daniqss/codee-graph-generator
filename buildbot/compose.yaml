@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  buildbot-db-node:
+    image: postgres:16.1
+    environment:
+      POSTGRES_DB: buildbot
+      POSTGRES_USER: buildbot
+      POSTGRES_PASSWORD: buildbot
+    volumes:
+      - buildbot-db:/var/lib/postgresql/data
+    networks:
+      - buildbot-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  buildbot-master-node:
+    build:
+      context: master
+      dockerfile: Dockerfile
+    image: buildbot-master-image
+    ports:
+      - 8010:8010
+    networks:
+      - buildbot-network
+    depends_on:
+      buildbot-db-node:
+        condition: service_healthy
+
+  buildbot-worker-node:
+    build:
+      context: worker
+      dockerfile: Dockerfile
+    image: buildbot-worker-image
+    networks:
+      - buildbot-network
+
+networks:
+  buildbot-network:
+
+volumes:
+  buildbot-db:

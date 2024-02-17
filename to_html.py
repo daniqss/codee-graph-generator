@@ -9,7 +9,7 @@ def figs_to_html (figs):
     return htmls
 
 def to_html (filename, figs):
-    htmls = figs_to_html(figs, filename)
+    htmls = figs_to_html(figs)
     
     combined_html = f"""
     <!DOCTYPE html>

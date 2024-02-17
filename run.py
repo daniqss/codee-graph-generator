@@ -7,7 +7,7 @@ import stats.category as cat
 # import stats.checkers as chk
 import stats.screening as scr
 from to_html import to_html
-from send_to_email import send_to_email
+# from send_to_email import send_to_email
 
 def usage():
     print("Usage: python run.py <file1> <file2> ... <fileN>")
@@ -59,4 +59,4 @@ if __name__ == '__main__':
     message = to_html(operation, figs)
 
     # Send to email
-    send_to_email(operation, message)
+    # send_to_email(operation, message)

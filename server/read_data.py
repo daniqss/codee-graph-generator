@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 import json
 from constants import *
 
@@ -37,6 +38,10 @@ def read_data(string):
     return __read_json(file)
 
 def read_data_from_file(json_path):
-    file = json.load(open(json_path))
+    try:
+        file = json.load(open(json_path))
+    except Exception as e:
+        print(f'Error: {e}')
+        sys.exit(1)
     return __read_json(file) 
 

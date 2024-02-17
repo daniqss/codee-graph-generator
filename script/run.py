@@ -35,10 +35,13 @@ def obtain_arguments():
     return files, codee_path
 
 
-def run_codee(files, codee_path):
+def run_codee(dir, codee_path):
     # Make string from list of files
-    files_str = ' '.join(files)
-
+    files_str = []
+    for root, dirs, files in os.walk(dir):
+        files_str += files
+        print(files)
+        break
     # Run codee
     result = subprocess.run(f'{codee_path} {files_str} --json', shell=True, stdout=subprocess.PIPE)
 

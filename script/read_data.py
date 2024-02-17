@@ -42,7 +42,6 @@ def __read_json(json_obj):
     return convert_types_screening(screening), convert_types_category(category), convert_types_checkers(checkers)
 
 def read_data(string):
-    print(string)
     file = json.loads(string)
     return __read_json(file)
 

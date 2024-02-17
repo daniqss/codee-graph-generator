@@ -31,3 +31,7 @@ CODEE_PATH=/path/to/codee python run.py <file1> <file2> ... <fileN> / <dir>
 
 # Contributing
 If you want to contribute to the project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+# License
+This project is licensed under the terms of the [MIT License](LICENSE.md).
+```

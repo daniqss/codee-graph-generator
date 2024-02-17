@@ -1,6 +1,7 @@
 import resend
 from os import environ
 
+
 def send_to_email(operation, message):
     resend_key = "RESEND_KEY"
     email = "EMAIL"

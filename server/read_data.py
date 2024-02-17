@@ -6,7 +6,7 @@ import pandas as pd
 
 def read_data(json_path):
     try:
-        file = pd.read_csv(json_path)
+        file = pd.read_json(json_path)
         return file
     except FileNotFoundError: 
         print(f"El archivo en la ruta '{json_path}' no se encontró. ")

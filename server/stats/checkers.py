@@ -20,3 +20,4 @@ def checker_LRate(df: pd.DataFrame):
      ax[1].bar(cp_df.index, cp_df["L1"])
      ax[1].set_title('Gráfico de Barras para L1')
      ax[1].set_ylabel('Valor de L1')
+     return fig

@@ -1,0 +1,627 @@
+{
+    "Evaluation": [
+    [
+     {
+      "Target": "../../SO/P1/shell.c",
+      "Lines of code": "456",
+      "Optimizable lines": "70",
+      "Analysis time": "74 ms",
+      "# checks": "11",
+      "Effort": "36 h",
+      "Cost": "1178€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/c_P1.c",
+      "Lines of code": "161",
+      "Optimizable lines": "15",
+      "Analysis time": "55 ms",
+      "# checks": "8",
+      "Effort": "26 h",
+      "Cost": "850€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/c_P1.c",
+      "Lines of code": "161",
+      "Optimizable lines": "15",
+      "Analysis time": "51 ms",
+      "# checks": "8",
+      "Effort": "26 h",
+      "Cost": "850€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P1/delete.c",
+      "Lines of code": "167",
+      "Optimizable lines": "38",
+      "Analysis time": "33 ms",
+      "# checks": "7",
+      "Effort": "24 h",
+      "Cost": "785€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/shell.c",
+      "Lines of code": "240",
+      "Optimizable lines": "21",
+      "Analysis time": "53 ms",
+      "# checks": "7",
+      "Effort": "30 h",
+      "Cost": "981€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/proc_list.c",
+      "Lines of code": "257",
+      "Optimizable lines": "3",
+      "Analysis time": "53 ms",
+      "# checks": "7",
+      "Effort": "32 h",
+      "Cost": "1047€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/shell.c",
+      "Lines of code": "292",
+      "Optimizable lines": "26",
+      "Analysis time": "64 ms",
+      "# checks": "7",
+      "Effort": "30 h",
+      "Cost": "981€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P0/lista.c",
+      "Lines of code": "46",
+      "Optimizable lines": "9",
+      "Analysis time": "31 ms",
+      "# checks": "5",
+      "Effort": "32 h",
+      "Cost": "1047€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P1/historic.c",
+      "Lines of code": "43",
+      "Optimizable lines": "6",
+      "Analysis time": "19 ms",
+      "# checks": "5",
+      "Effort": "32 h",
+      "Cost": "1047€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P1/list.c",
+      "Lines of code": "150",
+      "Optimizable lines": "38",
+      "Analysis time": "35 ms",
+      "# checks": "5",
+      "Effort": "20 h",
+      "Cost": "654€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/c_P0.c",
+      "Lines of code": "101",
+      "Optimizable lines": "13",
+      "Analysis time": "37 ms",
+      "# checks": "5",
+      "Effort": "32 h",
+      "Cost": "1047€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/c_P0.c",
+      "Lines of code": "101",
+      "Optimizable lines": "13",
+      "Analysis time": "40 ms",
+      "# checks": "5",
+      "Effort": "32 h",
+      "Cost": "1047€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P0/p0.c",
+      "Lines of code": "236",
+      "Optimizable lines": "28",
+      "Analysis time": "41 ms",
+      "# checks": "3",
+      "Effort": "14 h",
+      "Cost": "458€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/list.c",
+      "Lines of code": "96",
+      "Optimizable lines": "21",
+      "Analysis time": "39 ms",
+      "# checks": "2",
+      "Effort": "12 h",
+      "Cost": "392€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/mem_list.c",
+      "Lines of code": "98",
+      "Optimizable lines": "21",
+      "Analysis time": "41 ms",
+      "# checks": "2",
+      "Effort": "12 h",
+      "Cost": "392€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/c_P2.c",
+      "Lines of code": "168",
+      "Optimizable lines": "6",
+      "Analysis time": "52 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/f_dadas.c",
+      "Lines of code": "163",
+      "Optimizable lines": "35",
+      "Analysis time": "49 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P2/util_funcs.c",
+      "Lines of code": "14",
+      "Optimizable lines": "0",
+      "Analysis time": "10 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/c_P2.c",
+      "Lines of code": "168",
+      "Optimizable lines": "6",
+      "Analysis time": "53 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/c_P3.c",
+      "Lines of code": "169",
+      "Optimizable lines": "21",
+      "Analysis time": "52 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/f_dadas.c",
+      "Lines of code": "203",
+      "Optimizable lines": "35",
+      "Analysis time": "50 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/util_funcs.c",
+      "Lines of code": "31",
+      "Optimizable lines": "3",
+      "Analysis time": "10 ms",
+      "# checks": "1",
+      "Effort": "8 h",
+      "Cost": "261€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "../../SO/P3/dynamic_list.c",
+      "Lines of code": "115",
+      "Optimizable lines": "0",
+      "Analysis time": "25 ms",
+      "# checks": "0",
+      "Effort": "0 h",
+      "Cost": "0€",
+      "Profiling": "  n/a"
+     },
+     {
+      "Target": "Total",
+      "Lines of code": "3636",
+      "Optimizable lines": "443",
+      "Analysis time": "967 ms",
+      "# checks": "94",
+      "Effort": "446 h",
+      "Cost": "14595€",
+      "Profiling": "  n/a"
+     }
+    ],
+    [
+     {
+      "Target": "../../SO/P1/shell.c",
+      "Scalar": "0",
+      "Control": "6",
+      "Memory": "2",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "2",
+      "L1": "1",
+      "L2": "6",
+      "L3": "4"
+     },
+     {
+      "Target": "../../SO/P2/c_P1.c",
+      "Scalar": "0",
+      "Control": "5",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "2",
+      "L1": "1",
+      "L2": "5",
+      "L3": "2"
+     },
+     {
+      "Target": "../../SO/P3/c_P1.c",
+      "Scalar": "0",
+      "Control": "5",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "2",
+      "L1": "1",
+      "L2": "5",
+      "L3": "2"
+     },
+     {
+      "Target": "../../SO/P1/delete.c",
+      "Scalar": "0",
+      "Control": "4",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "2",
+      "L1": "1",
+      "L2": "4",
+      "L3": "2"
+     },
+     {
+      "Target": "../../SO/P2/shell.c",
+      "Scalar": "0",
+      "Control": "1",
+      "Memory": "2",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "3",
+      "L1": "1",
+      "L2": "1",
+      "L3": "5"
+     },
+     {
+      "Target": "../../SO/P3/proc_list.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "6",
+      "L1": "1",
+      "L2": "0",
+      "L3": "6"
+     },
+     {
+      "Target": "../../SO/P3/shell.c",
+      "Scalar": "0",
+      "Control": "1",
+      "Memory": "2",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "3",
+      "L1": "1",
+      "L2": "1",
+      "L3": "5"
+     },
+     {
+      "Target": "../../SO/P0/lista.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "2",
+      "Vector": "3",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "4"
+     },
+     {
+      "Target": "../../SO/P1/historic.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "2",
+      "Vector": "3",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "4"
+     },
+     {
+      "Target": "../../SO/P1/list.c",
+      "Scalar": "0",
+      "Control": "2",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "2",
+      "L1": "1",
+      "L2": "2",
+      "L3": "2"
+     },
+     {
+      "Target": "../../SO/P2/c_P0.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "2",
+      "Vector": "3",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "4"
+     },
+     {
+      "Target": "../../SO/P3/c_P0.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "2",
+      "Vector": "3",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "4"
+     },
+     {
+      "Target": "../../SO/P0/p0.c",
+      "Scalar": "0",
+      "Control": "1",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "1",
+      "L1": "2",
+      "L2": "1",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P2/list.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "1",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "1"
+     },
+     {
+      "Target": "../../SO/P3/mem_list.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "1",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "1"
+     },
+     {
+      "Target": "../../SO/P2/c_P2.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P2/f_dadas.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P2/util_funcs.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P3/c_P2.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P3/c_P3.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P3/f_dadas.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P3/util_funcs.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "1",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "1",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "../../SO/P3/dynamic_list.c",
+      "Scalar": "0",
+      "Control": "0",
+      "Memory": "0",
+      "Vector": "0",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "0",
+      "L1": "0",
+      "L2": "0",
+      "L3": "0"
+     },
+     {
+      "Target": "Total",
+      "Scalar": "0",
+      "Control": "25",
+      "Memory": "16",
+      "Vector": "30",
+      "Multi": "n/a",
+      "Offload": "n/a",
+      "Quality": "23",
+      "L1": "23",
+      "L2": "25",
+      "L3": "46"
+     }
+    ]
+   ],
+    "Ranking of Checkers": [
+    [
+     {
+      "Checker": "RMK015",
+      "Level": "L1",
+      "Priority": "P27",
+      "#": "22",
+      "Title": "Tune compiler optimization flags to increase the speed of the code"
+     },
+     {
+      "Checker": "PWR003",
+      "Level": "L1",
+      "Priority": "P18",
+      "#": "1",
+      "Title": "Explicitly declare pure functions"
+     },
+     {
+      "Checker": "PWR018",
+      "Level": "L2",
+      "Priority": "P6",
+      "#": "25",
+      "Title": "Call to recursive function within a loop inhibits vectorization"
+     },
+     {
+      "Checker": "PWR010",
+      "Level": "L3",
+      "Priority": "P4",
+      "#": "3",
+      "Title": "Avoid column-major array access in C/C++"
+     },
+     {
+      "Checker": "PWR001",
+      "Level": "L3",
+      "Priority": "P3",
+      "#": "6",
+      "Title": "Declare global variables as function parameters"
+     },
+     {
+      "Checker": "PWR016",
+      "Level": "L3",
+      "Priority": "P2",
+      "#": "14",
+      "Title": "Use separate arrays instead of an Array-of-Structs"
+     },
+     {
+      "Checker": "PWR035",
+      "Level": "L3",
+      "Priority": "P2",
+      "#": "13",
+      "Title": "Avoid non-consecutive array access to improve performance"
+     },
+     {
+      "Checker": "PWR012",
+      "Level": "L3",
+      "Priority": "P2",
+      "#": "2",
+      "Title": "Pass only required fields from derived type as parameters"
+     },
+     {
+      "Checker": "RMK010",
+      "Level": "L3",
+      "Priority": "P0",
+      "#": "8",
+      "Title": "The vectorization cost model states the loop is not a SIMD opportunity due to strided memory accesses in the loop body"
+     }
+    ]
+   ]
+   }

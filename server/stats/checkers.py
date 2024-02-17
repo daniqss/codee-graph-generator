@@ -14,10 +14,11 @@ def checker_LRate(df: pd.DataFrame):
      fig, ax = plt.subplots(1,2)
      cp_df = df.copy()
      cp_df = cp_df.iloc[:-1]
-     ax[0].bar(cp_df.index, cp_df["L3"])
-     ax[0].set_title('Gráfico de Barras para L3')
-     ax[0].set_ylabel('Valor de L3')
-     ax[1].bar(cp_df.index, cp_df["L1"])
-     ax[1].set_title('Gráfico de Barras para L1')
-     ax[1].set_ylabel('Valor de L1')
+     x = range(len(cp_df))
+     width = 0.3
+     ax.bar(x - width/3, cp_df["L1"], width, label ="L1")
+     ax.bar(x , cp_df["L2"], width, label ="L2")
+     ax.bar(x + width/3, cp_df["L3"], width, label = "L3")
+
+     ax.legend()
      return fig

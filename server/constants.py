@@ -25,5 +25,9 @@ TYPE_MAPPINGS_CATEGORY = {
 }
 
 TYPE_MAPPINGS_CHECKERS = {
+    'Checker': int, 
+    'Level': int, 
+    'Priority': int, 
     '#': int, 
+    'Title': int, 
 }    

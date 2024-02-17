@@ -55,7 +55,7 @@ if __name__ == '__main__':
     dir, codee_path = obtain_arguments()
 
     output = run_codee(dir, codee_path)
-    dt_screening, dt_category, dt_checkers = rd.read_data_from_file(output)
+    dt_screening, dt_category, dt_checkers = rd.read_data(output)
 
     cat_figs = [cat.category_Lrate_graph(dt_category), cat.category_rate_graph(dt_category)]
     scr_figs = [scr.pizza_plot(dt_screening,"Optimizable lines"), scr.bar_plot(dt_screening,"Optimizable lines"),
